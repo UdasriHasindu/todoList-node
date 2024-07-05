@@ -4,32 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <h1>Hello there.. Its <%= amazingDay %></h1>
+    <div class="container">
+        <h1>Hello there.. It's <%= amazingDay %></h1>
 
-    <div class="list">
-        <ul>
-            <li>Math Tutorial</li>
-            <li>Workout</li>
-            <li>Project Work</li>
+        <div class="list">
+            <h2>My Tasks</h2>
+            <ul id="taskList">
+                <% for(let i = 0; i < userItems.length; i++){ %>
+                    <li><%= userItems[i] %></li>
+                <% } %>
+            </ul>
 
-           
-            <% for (let i = 0; i < userItems.length; i++) { %>
-                <li><%= userItems[i] %></li>
-            <% } %>
-            
-        </ul>
-
-     
-
-
-        <form action="/" method="post">
-            <input type="text" name="item" >
-            <button type="submit">Add Item</button>
-        </form>
+            <form action="/" method="post" id="addItemForm">
+                <input type="text" name="item" id="newItemInput" placeholder="Enter new task" autocomplete="on">
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+ 
 
     </div>
 </body>
