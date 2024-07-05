@@ -53,17 +53,27 @@ ul {
 
 ul li {
     background-color: #fff;
-    padding: 10px 15px;
+    padding: 10px 35px;
     border-radius: 4px;
     margin-bottom: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
+#check-items{
+    position: absolute;
+    margin: 12px 20px 12px 5px;
+}
+
+
+
 ul li:last-child {
     margin-bottom: 0;
+}
+
+input:checked+li{
+    text-decoration: line-through;
 }
 
 /* Form styles */
@@ -97,5 +107,11 @@ form button:hover {
 @media (max-width: 768px) {
     .container {
         width: 90%;
+    }
+
+    #addItemForm{
+        display: flex;
+        flex-direction: column;
+        
     }
 }
