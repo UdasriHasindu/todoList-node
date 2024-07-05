@@ -9,5 +9,28 @@
 <body>
     
     <h1>Hello there.. Its <%= amazingDay %></h1>
+
+    <div class="list">
+        <ul>
+            <li>Math Tutorial</li>
+            <li>Workout</li>
+            <li>Project Work</li>
+
+           
+            <% for (let i = 0; i < userItems.length; i++) { %>
+                <li><%= userItems[i] %></li>
+            <% } %>
+            
+        </ul>
+
+     
+
+
+        <form action="/" method="post">
+            <input type="text" name="item" >
+            <button type="submit">Add Item</button>
+        </form>
+
+    </div>
 </body>
 </html>
